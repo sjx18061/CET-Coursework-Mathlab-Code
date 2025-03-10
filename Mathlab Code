@@ -147,7 +147,7 @@ angle_t_sob = asind((1 ./ sqrt(3)) .* sind(angle_i_sob)); 	% calculate angle of 
 % calculate the refraction coefficient
 r_c_sob = (cosd(angle_i_sob) - (sqrt(p2 ./ p1) .* cosd(angle_t_sob))) ./ (cosd(angle_i_sob) + (sqrt(p2 ./ p1) .* cosd(angle_t_sob)));   
 
-r_c_t_sob = (r_c_sob) .^2;                           			% calculate total refraction coefficient
+r_c_t_sob = (r_c_sob) .^2;                           				% calculate total refraction coefficient
 
 E_r_2_4_sob = (1 ./ drp_sob) .*exp((-j) .* beta_2_4 .* drp_sob) .* r_c_t_sob;   % calculate electric field of reflection ray(2.4GHz)
 E_r_5_8_sob = (1 ./ drp_sob) .*exp((-j) .* beta_5_8 .* drp_sob) .* r_c_t_sob;   % calculate electric field of reflection ray(5.8GHz)
@@ -364,7 +364,7 @@ legend('Direct Ray', 'First Order', 'Second Order', 'Third Order', 'Fourth Order
 grid on;
 
 % graph of the relationship between incidence ray and reflection coeeficient
-o = 1 : 1 :10; 						% order 1-10 for plot graph
+o = 1 : 1 :10; 						% order 1st-10th for plot graph
 angle_x = 0 : 1 : 90;					% incident angle 0-90 degree
 angle_x_t = asind((1 ./ sqrt(3)) .* sind(angle_x));	% refraction angle
 
